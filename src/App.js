@@ -1,23 +1,19 @@
-import logo from './logo.svg';
 import './App.css';
+import StudentContextWrapper from './context/studentContext';
+import StudentList from './pages/studentsList';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className='container'>
+        <div className='row pt-4'>
+          <div className='col-10'>
+            <StudentContextWrapper>
+              <StudentList />
+            </StudentContextWrapper>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
